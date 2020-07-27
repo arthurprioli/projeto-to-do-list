@@ -3,6 +3,8 @@ function adicionarItem(){
     const fazer = document.createElement('input')
     const feito = document.createElement('input')
     const confirmar = document.createElement('input')
+    const excluir = document.createElement('input')
+    excluir.type = ""
     confirmar.type = "button"
     feito.type = "checkbox"
     lista.appendChild(feito)
@@ -11,8 +13,8 @@ function adicionarItem(){
     lista.innerHTML += '</br>'
 }
 
-function removerItem(){}
 
 function modificarItem(){}
 
-adicionarItem()
+const add = document.querySelector('#add')
+add.onclick = e => adicionarItem()
